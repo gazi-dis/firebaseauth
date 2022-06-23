@@ -21,12 +21,10 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Component
-public class FirebaseAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {
+public class FirebaseAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
     @Autowired
     ObjectMapper objectMapper;
-    
-    private static final long serialVersionUID = -7858869558953243875L;
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
