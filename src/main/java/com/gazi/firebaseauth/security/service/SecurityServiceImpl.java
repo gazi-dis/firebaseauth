@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import com.gazi.firebaseauth.security.model.Credential;
 import com.gazi.firebaseauth.security.model.User;
 import com.google.auth.Credentials;
 
@@ -28,9 +29,9 @@ public class SecurityServiceImpl implements SecurityService{
     }
 
     @Override
-    public Credentials getCredentials() {
+    public Credential getCredentials() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
-        return (Credentials) securityContext.getAuthentication().getCredentials();
+        return (Credential) securityContext.getAuthentication().getCredentials();
     }
 
     @Override
